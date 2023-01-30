@@ -7,7 +7,7 @@ export type PageTemplateProps = {
   body: string
 }
 
-const PageTemplate = ({ heading, body }: PageTemplateProps) => (
+const PageTemplate = ({ body }: PageTemplateProps) => (
   <S.Content>
     <LinkWrapper href="/">
       <CloseOutline size={32} />

@@ -18,7 +18,7 @@ export const getStaticPaths = async () => {
 
   console.log(pages, 'sou eu')
 
-  const paths = pages.map(({ slug }) => ({
+  const paths = pages.map(({ slug }: any) => ({
     params: { slug }
   }))
 
