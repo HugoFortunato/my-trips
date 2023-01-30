@@ -18,8 +18,11 @@
     ]
   },
   "dependencies": {
+    "@apollo/client": "^3.7.5",
     "@next/font": "13.1.6",
     "@styled-icons/evaicons-outline": "^10.46.0",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.1.0",
     "jest-styled-components": "^7.1.1",
     "leaflet": "1.7.1",
     "next": "13.1.6",
