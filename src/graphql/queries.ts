@@ -1,7 +1,4 @@
-// import { gql } from 'graphql-request'
-
-// Caso haja necessidade de pegar os dados de qlq dessas queries, voce pode usar o useQuery no seu componente
-import { gql } from '@apollo/client'
+import { gql } from 'graphql-request'
 
 export const GET_PAGES = gql`
   query getPages($first: Int) {
@@ -24,6 +21,50 @@ export const GET_PAGE_BY_SLUG = gql`
       heading
       body {
         html
+      }
+    }
+  }
+`
+
+export const GET_PLACES = gql`
+  query getPlace($first: Int) {
+    places(first: $first) {
+      id
+      slug
+      name
+      location {
+        latitude
+        longitude
+      }
+      description {
+        html
+      }
+      gallery {
+        url
+        height
+        width
+      }
+    }
+  }
+`
+
+export const GET_PLACE_BY_SLUG = gql`
+  query getPlaceBySlug($slug: String!) {
+    place(where: { slug: $slug }) {
+      id
+      slug
+      name
+      location {
+        latitude
+        longitude
+      }
+      description {
+        html
+      }
+      gallery {
+        url
+        height
+        width
       }
     }
   }
